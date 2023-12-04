@@ -1,0 +1,93 @@
+.container {
+    max-width: 65%; 
+    height: 500px; 
+    margin:  50px auto;
+    box-shadow: 10px 10px 40px rgba(6, 194, 207, 0.26);
+    overflow-x: auto;
+    position: relative;
+}
+
+.fixed-container {
+    position: fixed;
+    width: 65%;
+    height: 30px;
+    background-color: rgba(200, 234, 238, 0.76);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+
+}
+
+.folder-frame {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px; 
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto; 
+    padding: 40px 20px 20px;
+}
+
+.container::-webkit-scrollbar {
+    width: 0; 
+}
+  
+
+.folder-container {
+    background-color:  rgb(200, 234, 238); 
+    box-shadow: 2px 2px 5px rgba(0, 0, 139, 0.2);
+    border-radius: 8px; 
+    width: 150px; 
+    padding: 10px; 
+    margin: 10px; 
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s, color 0.3s;
+    cursor: pointer;
+}
+  
+.folder-container:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 139, 0.2);
+    transform: translate(-3px, -3px); 
+}
+  
+.folder-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.folder-text {
+    font-size: 14px;
+    color: rgb(0, 0, 139); 
+}
+
+.button {
+    color: transparent;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border: none;
+    border-radius: 50%;
+    padding: 4px, 2px;
+    cursor: pointer;
+    transition: font-size 0.3s;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+}
+ 
+.close-button {
+    background-color: rgba(172, 1, 1, 0.707);
+    top: 5px;
+    left: 15px;
+}
+
+.button:hover {
+    color: rgb(200, 234, 238);
+}
+
+.back-button {
+    background-color: rgba(195, 182, 0, 0.788);
+    top: 5px;
+    left: 45px;
+
+}

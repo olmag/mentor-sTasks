@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React, {useState} from "react";
+
 import './App.css';
+import AlbumsPage from './components/AlbumsPage/AlbumsPage';
+
 
 function App() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setModalOpen(true);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        { modalOpen === true ?(
+          <AlbumsPage
+          setModalOpen={setModalOpen}
+          modalOpen={modalOpen}
+          />
+        ) : (
+          <button className="button-albums" onClick={handleButtonClick}>Відкрити альбоми</button>
+        )}
+      </div>
     </div>
   );
 }
