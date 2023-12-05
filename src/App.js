@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <div>
+        {/* а що ти будеш робити, коли кількість сторінок збільшиться? */}
         { modalOpen === true ?(
           <AlbumsPage
           setModalOpen={setModalOpen}
